@@ -8,31 +8,23 @@
     "start": "next start"
   },
   "dependencies": {
-    "@prisma/client": "^5.10.0",
-    "@tiptap/core": "^2.2.4",
-    "@tiptap/extension-color": "^2.2.4",
-    "@tiptap/extension-font-family": "^2.2.4",
-    "@tiptap/extension-image": "^2.2.4",
-    "@tiptap/extension-text-align": "^2.2.4",
-    "@tiptap/extension-text-style": "^2.2.4",
-    "@tiptap/extension-starter-kit": "^2.2.4",
-    "@tiptap/react": "^2.2.4",
-    "bcryptjs": "^2.4.3",
-    "framer-motion": "^11.0.8",
-    "howler": "^2.2.4",
+    "@prisma/client": "5.10.0",
+    "bcryptjs": "2.4.3",
+    "framer-motion": "11.0.8",
+    "howler": "2.2.4",
     "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "zustand": "^4.5.1"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zustand": "4.5.1"
   },
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "@types/howler": "^2.1.11",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "prisma": "^5.10.0",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "@types/bcryptjs": "2.4.6",
+    "@types/howler": "2.1.11",
+    "@types/node": "20.11.24",
+    "@types/react": "18.2.61",
+    "@types/react-dom": "18.2.19",
+    "prisma": "5.10.0",
+    "tailwindcss": "3.4.1",
+    "typescript": "5.3.3"
   }
 }
