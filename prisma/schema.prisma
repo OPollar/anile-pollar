@@ -1,0 +1,38 @@
+model Story {
+  id          String    @id @default(cuid())
+  title       String
+  character   Character @relation(fields: [characterId], references: [id])
+  characterId String    @unique
+  chapters    Chapter[]
+}
+
+model Chapter {
+  id           String  @id @default(cuid())
+  storyId      String
+  story        Story   @relation(fields: [storyId], references: [id])
+  order        Int
+  slug         String  @unique
+  title        String               // "Capitulo 1"
+  subtitle     String?              // "o inicio"
+  content      Json                 // documento Tiptap (JSON)
+  backgroundUrl String?             // imagem de fundo do capítulo
+  musicUrl     String?              // MP3 de trilha
+  introVideoUrl String?             // vídeo opcional em tela cheia
+  typography   Json    @default("{\"fontFamily\":\"Inter\",\"fontSize\":18,\"lineHeight\":1.8,\"color\":\"#e8eaff\"}")
+  published    Boolean @default(false)
+  updatedAt    DateTime @updatedAt
+}
+
+model Character {
+  id     String @id @default(cuid())
+  name   String                       // "Anile Pollar"
+  theme  Json                         // { primary:"#3b4cff", accent:"#a855f7", glow:"#7aa2ff", bg:"#0b0d14" }
+  sheet  Json                         // campos dinâmicos da ficha (abaixo)
+  story  Story?
+}
+
+model MasterUser {
+  id           String @id @default(cuid())
+  email        String @unique
+  passwordHash String
+}
